@@ -1,0 +1,15 @@
+{
+    "name": "@leksiq/func-overload",
+    "version": "0.0.1",
+    "author": {
+        "name": "Alexey Zakharov",
+        "email": "leksi@leksi.net"
+    },
+    "main": "./index",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/leksiq/node-func-overload.git"
+    },
+    "dependencies": {
+    }
+}
