@@ -18,7 +18,7 @@ The package is intended to help to perform functions "overloading" in JavaScript
 
     'use strict';
     const
-        {satisfy, M, C, X} = require('node-func-overload')
+        {satisfy, M, C, X} = require('@leksiq/func-overload')
     ;
     
     function test(a, b, c) {
