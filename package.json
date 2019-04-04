@@ -1,15 +1,23 @@
 {
-    "name": "@leksiq/func-overload",
-    "version": "0.0.1",
-    "author": {
-        "name": "Alexey Zakharov",
-        "email": "leksi@leksi.net"
-    },
-    "main": "./index",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/leksiq/node-func-overload.git"
-    },
-    "dependencies": {
-    }
+  "name": "@leksiq/func-overload",
+  "version": "0.0.1",
+  "author": "Alexey Zakharov <leksi@leksi.net>",
+  "main": "./index",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leksiq/node-func-overload.git"
+  },
+  "dependencies": {},
+  "description": "Makes function \"overloading\" in JavaScript more controlled.",
+  "bugs": {
+    "url": "https://github.com/leksiq/node-func-overload/issues"
+  },
+  "homepage": "https://github.com/leksiq/node-func-overload#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "overloading"
+  ],
+  "license": "MIT"
 }
