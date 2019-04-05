@@ -2,7 +2,7 @@
 (() => {
 
     function apply_condition(cond, v) {
-        if(cond === undefined) {
+        if(v === undefined || cond === undefined) {
             return true;
         }
         if(typeof(cond) === 'function') {
