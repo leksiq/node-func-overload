@@ -2,7 +2,7 @@
 (() => {
 
     function apply_condition(cond, v) {
-        if(v === undefined || cond === undefined) {
+        if(cond === undefined) {
             return true;
         }
         if(typeof(cond) === 'function') {
@@ -20,7 +20,7 @@
     }
     
     function C(v, cond) {
-        return apply_condition(cond, v) ? undefined : true;
+        return (v === undefined || apply_condition(cond, v)) ? undefined : true;
     }
     
     function satisfy(arr) {
