@@ -5,10 +5,13 @@
         if(cond === undefined) {
             return true;
         }
-        if(typeof(cond) === 'function') {
-            return cond(v);
+        let res = (typeof(v) === cond.toString() || typeof(cond) === 'function' && cond.prototype && (v instanceof cond));
+        if(!res) {
+            if(typeof(cond) === 'function' && !/^class\s/.exec(cond.toString())) {
+                return cond(v);
+            }
         }
-        return typeof(v) === cond.toString();
+        return res;
     }
 
     function M(v, cond) {

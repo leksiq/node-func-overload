@@ -1,6 +1,6 @@
 {
   "name": "@leksiq/func-overload",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "Alexey Zakharov <leksi@leksi.net>",
   "main": "./index",
   "repository": {
@@ -8,14 +8,17 @@
     "url": "git+https://github.com/leksiq/node-func-overload.git"
   },
   "dependencies": {},
+  "devDependencies": {
+    "tap": "^11.0.0"
+  },
+  "scripts": {
+    "test": "tap --cov coverage/*.js"
+  },
   "description": "Makes function \"overloading\" in JavaScript more controlled.",
   "bugs": {
     "url": "https://github.com/leksiq/node-func-overload/issues"
   },
   "homepage": "https://github.com/leksiq/node-func-overload#readme",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "overloading"
   ],
