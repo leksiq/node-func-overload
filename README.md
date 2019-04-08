@@ -2,9 +2,9 @@
 The package is intended to help to perform functions "overloading" in JavaScript especially when mutual excluding argument sets are used. Also it is applied to options object and so on.
 
 ## API
-+ **M**(arg [, (condition | type)]) - marks variable `arg` as mandatory. If `condition` function or `type` string are supplied the `arg` is considered as present when `condition(arg)` resolves `true` or `typeof(arg)` resolves `type`.
++ **M**(arg [, (condition | type)]) - marks variable `arg` as mandatory. If `condition` function or `type` string are supplied the `arg` is considered as present when `condition(arg)` resolves `true` or `typeof(arg)` resolves `type` or `arg instanceof type` resolves `true`.
 
-+ **C**(arg [, (condition | type)]) - marks variable `arg` as conditional. If `condition` function or `type` string are supplied the `arg` is considered as present when `condition(arg)` resolves `true` or `typeof(arg)` resolves `type`.
++ **C**(arg [, (condition | type)]) - marks variable `arg` as conditional. If `condition` function or `type` string are supplied the `arg` is considered as present when `condition(arg)` resolves `true` or `typeof(arg)` resolves `type` or `arg instanceof type` resolves `true`.
 
 
 + **X**(arg) - marks variable `arg` as absent. The `arg` itself may be used instead of `X(arg)`. It is introduced for more expressiveness.
