@@ -150,3 +150,38 @@ In this case we would use the following code:
         ...
 
     }
+
+### Express.js example
+
+How to select only valid queries...
+
+    app.get('/', (request, response) => {
+        let 
+            {group, symbols, from, to, count, year, ...rest} = request.query,
+            filename = null
+        ;
+        if(Object.keys(rest).length) {
+            response.status(501).end('ERROR unknown parameter(s): ' + JSON.stringify(rest) + '!');
+            return;
+        }
+        switch(true) {
+            case satisfy([M(group), C(symbols), M(from), M(to), count, year]):
+                filename = group + '_' + from + '_' + to;
+                break;
+            case satisfy([M(group), C(symbols), M(from), to, M(count, v => v > 0), year]):
+                    filename = group + '_' + from + '_' + count;
+                    break;
+            case satisfy([M(group), C(symbols), from, M(to), M(count, v => v > 0), year]):
+                    filename = group + '_' + count + '_' + to;
+                    break;
+            case satisfy([M(group), C(symbols), from, to, count, M(year)]):
+                    from = year + '-01-01';
+                    to = year + '-12-31';
+                    filename = group + '_' + year;
+                    break;
+            default:
+                response.status(501).end('ERROR bad parameter(s)!');
+                return;
+        }
+        ...
+    }
