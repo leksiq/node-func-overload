@@ -33,7 +33,7 @@ The package is intended to help to perform functions "overloading" in JavaScript
                 console.log('case 3');
                 break;
             default:
-                throw 'Inconstistent argumets!';
+                throw 'Inconstistent arguments!';
                 break;
 
         }
@@ -55,8 +55,8 @@ produces
     case 2
     case 2
     case 1
-    exception: 'Inconstistent argumets!'
-    exception: 'Inconstistent argumets!'
+    exception: 'Inconstistent arguments!'
+    exception: 'Inconstistent arguments!'
     case 3
     
 ### Options
