@@ -1,6 +1,6 @@
 {
   "name": "@leksiq/func-overload",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "author": "Alexey Zakharov <leksi@leksi.net>",
   "main": "./index",
   "repository": {
